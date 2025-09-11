@@ -1,0 +1,24 @@
+name: Build and Release PostgreSQL with Additional Tools
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+on:
+  push:
+    branches:
+      - release
+  workflow_dispatch:
+
+jobs:
+  build-and-release-linux:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build and release PostgreSQL and Dependencies
+        run: |
+          ./build_and_release.sh
+        env:
+          GH_TOKEN: ${{ github.token }}
