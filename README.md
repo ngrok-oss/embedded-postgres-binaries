@@ -1,4 +1,16 @@
-# <img src="zonky.jpg" height="100"> Embedded Postgres Binaries
+# <img src="zonky.jpg" height="100"> Embedded Postgres Binaries (with tools)
+
+## Fork
+
+This fork includes additional tools with generated binaries: `psql`, `pg_dump`, `pg_dumpall`, and `pg_restore`.
+
+To generate the Github releases:
+1. Make sure to have the `gh` tool installed
+2. Follow the prerequisites section below
+3. run `./build_and_release.sh`
+
+Edit the `build_and_release.sh` script to choose versions to release.
+
 
 ## Introduction
 
@@ -18,7 +30,6 @@ However, with a little effort, the embedded binaries can also be integrated with
 * [zonkyio/embedded-postgres](https://github.com/zonkyio/embedded-postgres) (Java)
 * [hgschmie/pg-embedded](https://github.com/hgschmie/pg-embedded) (Java)
 * [fergusstrange/embedded-postgres](https://github.com/fergusstrange/embedded-postgres) (Go)
-* [theseus-rs/postgresql-embedded](https://github.com/theseus-rs/postgresql-embedded) (Rust)
 * [faokunega/pg-embed](https://github.com/faokunega/pg-embed) (Rust)
 * [leinelissen/embedded-postgres](https://github.com/leinelissen/embedded-postgres) (NodeJS)
 
