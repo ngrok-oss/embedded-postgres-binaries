@@ -22,7 +22,7 @@ function do_release {
     gh release create "${release_name}" --notes "${sums}" --title "" release/postgresql-${version}-*
 }
 
-versions=("15.14")
+versions=("15.20")
 for version in "${versions[@]}"; do
     do_build "$version"
     do_release "$version"
